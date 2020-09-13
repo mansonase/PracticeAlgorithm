@@ -1,0 +1,21 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+//apply plugin: 'java'
+plugins {
+    id 'application'
+}
+sourceCompatibility = 1.8
+version = '1.0'
+repositories {
+    mavenCentral()
+}
+run{
+    standardInput = System.in
+}
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+}
+
